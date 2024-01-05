@@ -1,6 +1,14 @@
 # IP-Intel
 IP Intelligence Tool
 
+Tool used:
+1)VirusTotal
+2)AbuseIPDB
+3)IPQualitySCore
+4)IPData
+5)IPInfo
+6)VPNAPI
+
 ## Single IP 
 ![SingleIP_1](https://github.com/hem675/IP-Intel/assets/76170189/de3dbd46-9a71-4807-be0c-42acd3c6d98d)
 ![SingleIP_2](https://github.com/hem675/IP-Intel/assets/76170189/3cb3ee96-90a6-4da1-a244-42bbfa74f040)

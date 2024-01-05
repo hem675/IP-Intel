@@ -143,9 +143,7 @@ def ipquality(IP,KEY,input):
             print(f"\033[93mIP Quality Score: {r['fraud_score']} \033[0m (75+ as suspicious and 90+ as high risk)")
             print(f'City: {r["city"]}')
             print("Crawler:", '\033[92mTrue\033[0m' if r['is_crawler'] else '\033[91mFalse\033[0m')
-            print("Proxy IP:", '\033[92mTrue\033[0m' if r['proxy'] else '\033[91mFalse\033[0m')
-            print("VPN IP:", '\033[92mTrue\033[0m' if r['vpn'] else '\033[91mFalse\033[0m')
-
+           
     else:
         print(f"Error: {response.status_code}. Failed to retrieve information.")
 

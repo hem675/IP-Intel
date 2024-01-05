@@ -1,12 +1,17 @@
 # IP-Intel
 IP Intelligence Tool
 
-Tool used:
+Tools used:
 1)VirusTotal
+
 2)AbuseIPDB
+
 3)IPQualitySCore
+
 4)IPData
+
 5)IPInfo
+
 6)VPNAPI
 
 ## Single IP 

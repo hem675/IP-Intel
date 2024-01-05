@@ -1,10 +1,6 @@
-# IP-Intel
-
-## IP Intelligence Tool 
+# IP-Intel (IP Intelligence Tool)
 
 The IP-Intel Tool is a comprehensive solution that combines the power of six different tools to provide enhanced IP intelligence. This tool seamlessly amalgamates IP reputation data from multiple sources, providing a comprehensive overview. This tool is designed to assist Security Operations Centers (SOC), Threat Intelligence analysts, and Open Source Intelligence (OSINT) researchers in obtaining valuable information about IP addresses. 
-
-
 
 ## Tools used
 

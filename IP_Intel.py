@@ -68,8 +68,8 @@ def absuseIP(IP, KEY,input):
             date, time = date.split('T')
             print(f"Last Reported: {date} {time}")
 
-        print("Public IP:", '\033[92mTrue\033[0m' if {r["data"]["isPublic"]} else '\033[91mFalse\033[0m')
-        print("Tor IP:", '\033[92mTrue\033[0m' if {r["data"]["isTor"]} else '\033[91mFalse\033[0m')
+	print("Public IP:", '\033[92mTrue\033[0m' if r["data"]["isPublic"] else '\033[91mFalse\033[0m')
+        print("Tor IP:", '\033[92mTrue\033[0m' if r["data"]["isTor"] else '\033[91mFalse\033[0m')
 
 def ipinfo(IP,KEY,input):
 

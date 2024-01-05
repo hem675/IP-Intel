@@ -4,6 +4,8 @@
 
 The IP-Intel Tool is a comprehensive solution that combines the power of six different tools to provide enhanced IP intelligence. This tool seamlessly amalgamates IP reputation data from multiple sources, providing a comprehensive overview. This tool is designed to assist Security Operations Centers (SOC), Threat Intelligence analysts, and Open Source Intelligence (OSINT) researchers in obtaining valuable information about IP addresses. 
 
+
+
 ## Tools used
 
 1)VirusTotal
@@ -17,6 +19,8 @@ The IP-Intel Tool is a comprehensive solution that combines the power of six dif
 5)IPInfo
 
 6)VPNAPI
+
+Authenticate by logging into each respective tool, establish an account, and subsequently substitute the placeholder with your unique API Key within the codebase.
 
 ## Single IP 
 ![SingleIP_1](https://github.com/hem675/IP-Intel/assets/76170189/de3dbd46-9a71-4807-be0c-42acd3c6d98d)

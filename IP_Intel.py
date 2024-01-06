@@ -68,13 +68,14 @@ def absuseIP(IP, KEY,input):
             date, time = date.split('T')
             print(f"Last Reported: {date} {time}")
 
-	print("Public IP:", '\033[92mTrue\033[0m' if r["data"]["isPublic"] else '\033[91mFalse\033[0m')
+        print("Public IP:", '\033[92mTrue\033[0m' if r["data"]["isPublic"] else '\033[91mFalse\033[0m')
         print("Tor IP:", '\033[92mTrue\033[0m' if r["data"]["isTor"] else '\033[91mFalse\033[0m')
-
+        
 def ipinfo(IP,KEY,input):
 
     url = f'https://ipinfo.io/{IP}?token={KEY}'
     response = requests.get(url)
+    
 
     if(response.status_code==200):
 
@@ -87,7 +88,7 @@ def ipinfo(IP,KEY,input):
             print("IPInfo Report","\n")
             print(f"City: {r['city']}")
             print(f"Region: {r['region']}")
-            print(f"Country: {r['country']}")
+            print(f"Country: {r['country']}")          
             print(f"Org: {r['org']}")
             print(f"TimeZone: {r['timezone']}")
 
@@ -105,17 +106,19 @@ def ipdata(IP,KEY,input):
         if(input=='M'):
             values.extend([r['asn']['asn'],r['threat']['is_icloud_relay'],r["threat"]["is_datacenter"],r["threat"]["is_bogon"]])
         else:   
-            carrier= r.get("carrier")
+            carrier= r.get("carrier", "asn")
+            asn=r.get("asn")
+            city=r.get("city")
+            region=r.get("region")
+            country=r.get("country_name")
             print("IPdata Report","\n")
-            print(f"City: {r['city']}")
-            print(f"Region: {r['region']}")
-            print(f"Country: {r['country_name']}")
-            print(f"ASN: {r['asn']['asn']}")
 
-            if carrier is not None:
-                print(f"Carrier: {r['carrier']['name']}")	
-            else:
-                print(f"Carrier: {carrier}")	
+            if carrier and asn and asn and city and country is not None:
+                print(f"Carrier: {r['carrier']['name']}")
+                print(f"ASN: {r['asn']['asn']}")
+                print(f"City: {r['city']}")
+                print(f"Region: {r['region']}")
+                print(f"Country: {r['country_name']}")
 
             #Threat Intel
             print("Tor IP:", '\033[92mTrue\033[0m' if r['threat']['is_tor'] else '\033[91mFalse\033[0m')
@@ -143,7 +146,8 @@ def ipquality(IP,KEY,input):
             print(f"\033[93mIP Quality Score: {r['fraud_score']} \033[0m (75+ as suspicious and 90+ as high risk)")
             print(f'City: {r["city"]}')
             print("Crawler:", '\033[92mTrue\033[0m' if r['is_crawler'] else '\033[91mFalse\033[0m')
-           
+            
+
     else:
         print(f"Error: {response.status_code}. Failed to retrieve information.")
 
@@ -171,7 +175,6 @@ IPINFO_KEY ="Enter Your IPInfo API Key"
 IPDATA_KEY = "Enter Your IPData API Key"
 IPQUALITY_KEY ="Enter Your IPQualityScore API Key"
 VPNAPI_KEY = "Enter Your VPNAPI API Key"
-
 user_input=input("Single(S) IP or Muliple IP's(M):")
 
 if(user_input=='S'):
@@ -208,7 +211,7 @@ elif(user_input=='M'):
 
     
     for IP in ip_addresses:
-        # Open the file and write headers only once
+
         values=[]
         print(f"Running Reports for {IP} ...")
         virustotal(IP,VT_KEY,user_input)

@@ -19,8 +19,8 @@ The IP-Intel Tool is a comprehensive solution that combines the power of six dif
 Authenticate by logging into each respective tool, establish an account, and subsequently substitute the placeholder with your unique API Key within the codebase.
 
 ## Single IP 
-![SingleIP_1](https://github.com/hem675/IP-Intel/assets/76170189/de3dbd46-9a71-4807-be0c-42acd3c6d98d)
-![SingleIP_2](https://github.com/hem675/IP-Intel/assets/76170189/3cb3ee96-90a6-4da1-a244-42bbfa74f040)
+![image](https://github.com/hem675/IP-Intel/assets/76170189/2c5d13ad-4d57-4303-8ba0-ed57701db91e)
+![image](https://github.com/hem675/IP-Intel/assets/76170189/5d770eee-c375-45c5-9db2-4eca64357c5f)
 
 ## Multiple IP's
 Multiple IPs can be given as input in a text file and the final output will be in a CSV file.

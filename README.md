@@ -2,6 +2,12 @@
 
 The IP-Intel Tool is a comprehensive solution that combines the power of six different tools to provide enhanced IP intelligence. This tool seamlessly amalgamates IP reputation and IP Data from multiple sources, providing a comprehensive overview. This tool is designed to assist Security Operations Centers (SOC), Threat Intelligence analysts, and Open Source Intelligence (OSINT) researchers in obtaining valuable information about IP addresses. 
 
+To install IpInfo and IPdata
+```console
+pip install ipinfo
+pip install ipdata
+```
+
 ## Tools used
 
 1)VirusTotal
